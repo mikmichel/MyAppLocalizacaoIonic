@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+   <div #map id="map"></div> <!-- Mapa na tela do aplicativo -->
+
+   <!-- Informa na tela a latitude e longitude -->
+  <ion-note><b>Latitude:{{latitude}} </b></ion-note><br />
+  <ion-note><b>Longitude:{{longitude}} </b></ion-note><br />
+
+  <ion-button color="primary" expand="block" (click)="salvar()">
+    Salvar
+  </ion-button>
+  
+</ion-content>

@@ -42,7 +42,7 @@ export class HomePage {
 
   async mensagemSucesso(){
     const toast = await this.toastCtrl.create({
-      message: 'Sucesso',
+      message: 'Localização Salva com Sucesso',
       duration: 2000
     });
     toast.present();
@@ -100,6 +100,7 @@ export class HomePage {
       this.provider.dadosApi(dados, 'localizacao/inserir.php').subscribe(
         data => {
           this.router.navigate(['home'])
+          this.mensagemSucesso();
         }
       )
     });
